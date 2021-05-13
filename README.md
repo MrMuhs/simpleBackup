@@ -8,7 +8,8 @@ Well, as the name says - simple scripting to generate backups around 7z
 
 ## simpleBackup.py
 - creates backups for a folder
-- running script will keep runing and schedule backups
+- default running script will keep runing and schedule backups
+- their is a "oneShot" switch so the script exits after one run, so it can be used with e.g. Task Scheduler
 - their are full and incremental backups
 - their is a configurable time interval after backups gets deleted
 - their is a small log file

@@ -29,6 +29,7 @@ incrementalStep = timedelta(days=1)
 removeOldBackups = True
 keepFullBackupsFor = timedelta(days=7*5)
 keepIncrementalBackupsFor = timedelta(days=7*2)
+oneShot = False
 
 ##############################################################################################
 
@@ -170,7 +171,9 @@ def executeBackup():
   # just check if the fullback up would be required due earlier as the increment
   if incrementalStep > datetime.now() - dateLastFullBack:
     nextTriggerInAbsSeconds = (datetime.now() - dateLastFullBack).total_seconds()
-  s.enter(nextTriggerInAbsSeconds, 1, executeBackup)
+  
+  if oneShot == False:
+    s.enter(nextTriggerInAbsSeconds, 1, executeBackup)
 
 executeBackup()
 s.run()
