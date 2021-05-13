@@ -37,7 +37,7 @@ dateLastFullBackFileName = ""
 dateLastIncrementalBack = datetime(2000, 2, 20)
 dateLastIncrementalBackFileName = ""
 
-testing = True # used for dev debug
+testing = False # used for dev debug
 s = sched.scheduler(time.time, time.sleep)
 
 if testing == True:
