@@ -26,12 +26,10 @@ keepIncrementalBackupsFor = timedelta(days=7*2)
 ##############################################################################################
 
 for x in foldersToDoBackupsOf:
-  print(x)
   x["dateLastFullBack"] = datetime(2000, 2, 20)
   x["dateLastFullBackFileName"] = ""
   x["dateLastIncrementalBack"] = datetime(2000, 2, 20)
   x["dateLastIncrementalBackFileName"] = ""
-  print(x)
 
 s = sched.scheduler(time.time, time.sleep)
 
