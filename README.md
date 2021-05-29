@@ -21,3 +21,12 @@ Well, as the name says - simple scripting to generate backups around 7z
 - their will be incremental up backup, if the day is not full backup
 - their is a configurable time interval after backups gets deleted
 - their is a small log file
+
+## simpleBackupTimedMulti.py
+- creates backups for a configureable list of folders, each day
+- each folder on the list has a configureable backupname that is add to the filename 
+- their is a time of day to define when backup shall be executed
+- their is a day of week to define where full backup shall be created
+- their will be incremental up backup, if the day is not full backup
+- their is a configurable time interval after backups gets deleted
+- their is a small log file
